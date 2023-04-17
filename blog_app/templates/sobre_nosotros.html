@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %} 
+        <h1 class="fw-bolder mb-1">Nuestra historia</h1>                         
+{% endblock %}     
+    
+{% block contenido %}
+        <section class="mb-5">
+        <h2 class="fw-bolder mb-4 mt-5">Quiénes somos</h2>
+        <p class="fs-5 mb-4">Somos un grupo de 3 personas conformados por Julio Salazar, Julian Alonso y Emylene Almeida. Somos parte de la comunidad de estudiantes de CoderHouse y este es nuestro proyecto final para el curso básico de Python.</p>
+        
+        <h2 class="fw-bolder mb-4 mt-5">Acerca de la app</h2>
+        <p class="fs-5 mb-4">Esta aplicación web fue construida con Django para la parte del back-end y Bootstrap para el fron-end. Cuenta con las siguientes funciones:</p>
+        <ul>
+                <li>Sistema de registro, login y logout</li>
+                <li>CRUD para usuarios</li>
+                <li>CRUD para publicaciones</li>
+        </ul>
+        </section>
+{% endblock %}
+

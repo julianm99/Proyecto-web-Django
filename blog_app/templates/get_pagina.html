@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}
+  <h1 class="fw-bolder mb-1">{{ mensaje }}  </h1>                         
+  <h1 class="fw-bolder mb-1">{{ publicacion.titulo }}</h1>
+  <p>Escrito por {{ publicacion.autor }} - {{ publicacion.fecha_creacion }}</p>                       
+{% endblock %}  
+
+    
+{% block contenido %}
+  <h3>{{ publicacion.subtitulo }}</h3>   
+  <p>{{ publicacion.contenido|safe }}</p>
+  <img class= "imagen-publicacion" src="{{ publicacion.imagenpublicacion.imagen.url }}" alt="">
+  <br>
+  <a class="btn btn-danger" href="{% url 'eliminar_pagina' publicacion.id_publicacion %}"> Eliminar </a>
+  <a class="btn btn-success" href="{% url 'editar_pagina' publicacion.id_publicacion %}"> Editar </a>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}                          
+    <h1 class="fw-bolder mb-1">Bienvenidos al Inicio!</h1>                     
+{% endblock %}    
+
+{% block contenido %}
+    <h5>{{ mensaje }}</h5>
+    <section class="mb-5">
+        <p class="fs-5 mb-4">Para navegar a través de la aplicación web utiliza los botones del apartado de arriba! recomendamos que te registres para tener acceso a más funciones como crear tus propias publicaciones, editar tu información de usuario y más.</p>
+        <p class="fs-5 mb-4">Si quieres saber un poco más de la app, haz click en "Sobre Nosotros"</p>
+        <p class="fs-5 mb-4">Esperamos que te guste la experiencia.</p>
+    </section>
+{% endblock %}

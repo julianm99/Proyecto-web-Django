@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}                           
+  <h1 class="fw-bolder mb-1">Perfil</h1>                       
+{% endblock %}  
+
+    
+{% block contenido %}
+  <h4> {{usuario}} {{ mensaje }}</h4>
+  <ul>
+    <li><h6>Nombre: {{ usuario.first_name }} {{ usuario.last_name }}</h6></li>
+    <li><h6>Email: {{ usuario.email }}</h6></li>
+  </ul>
+  <button>
+  <a class="btn btn-danger" href="{% url 'eliminar_perfil' %}"> Eliminar </a>
+  <a class="btn btn-success" href="{% url 'editar_perfil' %}"> Editar </a>
+  </button>
+{% endblock %}
+

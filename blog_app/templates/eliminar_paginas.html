@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}                   
+<h1 class="fw-bolder mb-1">Eliminar Página</h1>                  
+{% endblock %}     
+    
+{% block formulario %}
+  <form  action="{% url 'eliminar_pagina' publicacion.id_publicacion %}"   method="POST">{% csrf_token %}
+  <p>¿Seguro que deseas borrar la publicacion permanentemente?</p>    
+  <input  type="submit"   value="Borrar">
+  </form>
+{% endblock %}    

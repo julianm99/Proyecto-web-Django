@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block contenido %}
+  {% if mensajes %}
+    {% for mensaje in mensajes %}
+      <div class="container">
+        <div class="well">
+            <div class="media">
+            <div class="media-body">
+              <section class="mb-5">
+              <h5 class="media-heading">{{ mensaje.username }}</h5>
+              <p class="fs-5 mb-4">{{ mensaje.mensaje|safe }}</p>
+              <p>{{ mensaje.fecha_creacion_mensaje }}</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <h5>No hay mensajes aun</h5>
+  {% endif %}
+{% endblock %}

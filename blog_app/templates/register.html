@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}                    
+        <h1 class="fw-bolder mb-1">Registrate</h1>               
+{% endblock %}
+
+{% block contenido %}
+        {{ mensaje }}
+{% endblock %}
+    
+{% block formulario %}
+        <form  action="{% url 'register' %}"   method="POST">  {% csrf_token %}
+                {{formulario.as_p}}
+        <button  type="submit">  REGISTRATE     </button >
+        </form>
+{% endblock %}    

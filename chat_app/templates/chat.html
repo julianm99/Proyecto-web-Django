@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}                    
+  <h1 class="fw-bolder mb-1">Chat</h1>                        
+{% endblock %}     
+
+{% block contenido %}
+<section class="mb-5">
+  <p class="fs-5 mb-4">En este apartado puedes escribir mensajes una vez logueado y podrás comunicarte con todos los que pertenezcan a la comunidad.</p>
+</section>
+
+<a class="btn btn-success" href="{% url 'escribir_mensaje' %}"> Escribe tu mensaje </a>
+<a class="btn btn-success" href="{% url 'ver_mensajes' %}"> Ver mensajes </a>
+{% endblock %}
+ 

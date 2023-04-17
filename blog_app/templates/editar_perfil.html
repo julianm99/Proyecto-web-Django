@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block Titulo %}                         
+<h1 class="fw-bolder mb-1">Editar Usuario</h1>                     
+{% endblock %}     
+    
+{% block formulario %}
+  <form  action="{% url 'editar_perfil' %}"   method="POST">{% csrf_token %}
+    <table>
+      {{ formulario.as_table }}   
+    </table>     
+  <input  type="submit" value="Guardar">
+  </form>
+{% endblock %}    
